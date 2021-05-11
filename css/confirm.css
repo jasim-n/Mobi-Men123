@@ -1,0 +1,218 @@
+#mainConfirm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 8rem;
+  width: 100%;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#mainConfirm #leftConfirm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 42%;
+  margin-left: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+#mainConfirm #leftConfirm .product {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 1rem;
+  width: 16rem;
+}
+
+#mainConfirm #leftConfirm .product .proimg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 105px;
+  position: relative;
+}
+
+#mainConfirm #leftConfirm .product .proimg .qty {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: grey;
+  color: #fff;
+  border-radius: 50%;
+  top: -10px;
+  left: -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+#mainConfirm #leftConfirm .product .proimg img {
+  width: 90px;
+  height: 90px;
+}
+
+#mainConfirm #leftConfirm .product .prodet {
+  margin-left: .5rem;
+}
+
+#mainConfirm #leftConfirm .total {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 1rem;
+}
+
+#mainConfirm #rightConfirm {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  width: 50%;
+  margin-right: 2rem;
+  border-right: 1px solid black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mainConfirm #rightConfirm form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mainConfirm #rightConfirm form .mainLabel {
+  position: relative;
+  margin: .2rem;
+}
+
+#mainConfirm #rightConfirm form .mainLabel input,
+#mainConfirm #rightConfirm form .mainLabel textarea {
+  border: 1px solid black;
+  padding: .6rem .2rem .2rem 1rem;
+  width: 25rem;
+  margin: .5rem;
+  border-radius: 5px;
+  outline-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  background: none;
+  height: 80%;
+  font-size: 1rem;
+  resize: none;
+  -webkit-transition: outline-color .3s ease;
+  transition: outline-color .3s ease;
+}
+
+#mainConfirm #rightConfirm form .mainLabel input:focus,
+#mainConfirm #rightConfirm form .mainLabel textarea:focus {
+  outline-color: purple;
+}
+
+#mainConfirm #rightConfirm form .mainLabel .input:focus ~ .label,
+#mainConfirm #rightConfirm form .mainLabel .input:not(:placeholder-shown).input:not(:focus) ~ .label {
+  top: -.1rem;
+  background-color: #fff;
+  font-size: .9rem;
+  padding: 0 .2rem;
+}
+
+#mainConfirm #rightConfirm form .mainLabel .label {
+  position: absolute;
+  cursor: text;
+  left: 1.5rem;
+  top: .8rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+#mainConfirm #rightConfirm button {
+  background-color: black;
+  color: #fff;
+  border-radius: 5px;
+  padding: .5rem;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
+}
+
+#mainConfirm #rightConfirm button:hover {
+  background-color: #fff;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  #mainConfirm {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #rightConfirm {
+    border: none !important;
+  }
+  #leftConfirm {
+    border: none !important;
+    margin-bottom: 1rem !important;
+    border-bottom: 1px solid black !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .mainLabel input,
+  .mainLabel textarea {
+    width: 100% !important;
+  }
+}
+/*# sourceMappingURL=confirm.css.map */

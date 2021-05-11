@@ -1,0 +1,171 @@
+#mainConfirm{
+    display: flex;
+    margin-top: 8rem;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+
+    #leftConfirm{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 42%;
+        margin-left: 2rem;
+        align-items: center;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        .product{
+            padding-top: 10px;
+            padding-bottom: 20px;
+            position: relative;
+            display: flex;
+            // align-items: center;
+            margin-left: 1rem;
+            width: 16rem;
+            // border-bottom: 1px solid #eee;
+
+            .proimg{
+                display: flex;
+                flex-direction: column;
+                border: 1px solid rgba(0,0,0,0.3);
+                align-items: center;
+                width: 105px;
+                position: relative;
+
+                .qty{
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    background-color: grey;
+                    color: #fff;
+                    border-radius: 50%;
+                    top: -10px;
+                    left: -10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+
+
+                img{
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+
+            .prodet{
+                margin-left: .5rem;
+            }
+
+        }
+                .total{
+                    width: 50%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-left: 1rem;
+                }
+    }
+    #rightConfirm{
+        flex-direction: column;
+        display: flex;
+        right: 0;
+        width: 50%;
+        margin-right: 2rem;
+        border-right: 1px solid black;
+        align-items: center;
+
+
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .mainLabel{
+                position: relative;
+                margin: .2rem;
+
+
+                input,
+                textarea{
+                    border: 1px solid black;
+                    // border: 2px solid rgba(77, 86, 211, 0.3);
+                    padding: .6rem .2rem .2rem 1rem;
+                    width: 25rem;
+                    margin: .5rem;
+                    border-radius: 5px;
+                    outline-color: rgba(0,0,0,0.3);
+                    position: relative;
+                    background: none;
+                    height: 80%;
+                    // outline-color: blue;
+                    font-size: 1rem;
+                    resize: none;
+                    transition: outline-color .3s ease;
+
+                }
+                input:focus,
+                textarea:focus{
+                    outline-color: purple;
+                }
+
+
+                .input:focus ~ .label,
+                .input:not(:placeholder-shown).input:not(:focus) ~ .label{
+                    top :-.1rem;
+                    background-color: #fff;
+                    font-size: .9rem;
+                    padding: 0 .2rem;
+                }   
+
+                .label{
+                    position: absolute;
+                    cursor: text;
+                    left: 1.5rem;
+                    top: .8rem;
+                    transition: all .3s ease;
+
+                }
+            }
+        }
+
+        button{
+            background-color: black;
+            color: #fff;
+            border-radius: 5px;
+            padding: .5rem;
+            border: 1px solid black;
+            outline: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #fff;
+            color: black;
+        }
+    }
+}
+
+@media (max-width : 768px){
+    #mainConfirm{
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: space-between;
+    }
+
+    #rightConfirm{
+        border: none !important;
+    }
+    #leftConfirm{
+        border: none !important;
+        margin-bottom: 1rem !important;
+        border-bottom: 1px solid black !important;
+    }
+}
+
+@media (max-width : 425px){
+    .mainLabel input,
+    .mainLabel textarea{
+        width: 100% !important;
+    }
+}
